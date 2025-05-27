@@ -1,5 +1,6 @@
-
+export DEBUGINFOD_URLS="https://debuginfod.voidlinux.org/"
 export PATH="$HOME/.local/npm-global/bin:$PATH"
+export PWNDBG_NO_AUTOUPDATE=true
 
 # Fix dbus stuff for void linux
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
@@ -27,8 +28,7 @@ export NVM_DIR="$HOME/.nvm"
 
 #custom aliases here
 alias vim='nvim'
-alias msfet='cd /opt/metasploit/tools/exploit/'
-alias patterncreate='/opt/metasploit/tools/exploit/pattern_create.rb'
-alias patternoffset='/opt/metasploit/tools/exploit/pattern_offset.rb'
+alias patterncreate='/software/pattern_tools/patterncreate.sh'
+alias patternoffset='/software/pattern_tools/patternoffset.sh'
 alias code='flatpak run com.visualstudio.code'
 
