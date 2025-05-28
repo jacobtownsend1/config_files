@@ -13,6 +13,9 @@
     ],
     "modules-right": [
         "tray",
+        "custom/firefox",
+        "custom/discord",
+        "custom/virtmanager",
 	"custom/screenshot",
         "pulseaudio",
         "network",
@@ -51,7 +54,7 @@
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click": "~/.local/bin/networkmanager-dmenu/networkmanager_dmenu"
     },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
@@ -77,5 +80,23 @@
         "on-click": "grim -g \"$(slurp)\" - | swappy -f -",
         "interval": 3600,  // doesn’t need to update frequently
         "exec": "echo ready"
+    },
+    "custom/firefox": {
+      "format": "  ",
+      "tooltip": true,
+      "tooltip-format": "Launch Firefox",
+      "on-click": "firefox"
+    },
+    "custom/discord": {
+      "format": "  ",
+      "tooltip": true,
+      "tooltip-format": "Launch Discord",
+      "on-click": "discord"
+    },
+    "custom/virtmanager": {
+      "format": " 力 ",
+      "tooltip": true,
+      "tooltip-format": "Launch Virt-Manager",
+      "on-click": "virt-manager"
     }
 }
