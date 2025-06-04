@@ -16,6 +16,7 @@
         "custom/firefox",
         "custom/discord",
         "custom/virtmanager",
+        "custom/teams",
 	"custom/screenshot",
         "pulseaudio",
         "network",
@@ -30,8 +31,7 @@
         "spacing": 10
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%a %b %d  %I:%M %p}"
     },
     "battery": {
         "states": {
@@ -49,7 +49,7 @@
         "bat": "BAT2"
     },
     "network": {
-	"format-wifi": "{essid} ({signalStrength}%) ",
+	"format-wifi": "({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr}",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
@@ -98,5 +98,11 @@
       "tooltip": true,
       "tooltip-format": "Launch Virt-Manager",
       "on-click": "virt-manager"
+    },
+    "custom/teams": {
+      "format": " 󰊻 ",
+      "tooltip": true,
+      "tooltip-format": "Launch Microsoft Teams",
+      "on-click": "flatpak run com.github.IsmaelMartinez.teams_for_linux"
     }
 }
